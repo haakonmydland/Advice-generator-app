@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import style from "./Card.module.css";
 import desktopDiv from "./assets/pattern-divider-desktop.svg";
 import mobileDiv from "./assets/pattern-divider-mobile.svg";
+import { apiObj } from "./types";
 
 export default function Card() {
   const [advice, setAdvice] = useState(["title", "advice"]);
@@ -27,7 +28,7 @@ export default function Card() {
       .then((response) => response.json())
       .then((data) => setAdviceWrapper(data));
   }
-  function setAdviceWrapper(data: object) {
+  function setAdviceWrapper(data: apiObj) {
     setAdvice((prev) => {
       return [data.slip.id, data.slip.advice];
     });
