@@ -1,0 +1,47 @@
+.card {
+  background-color: var(--Dark-Grayish-Blue);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.7rem;
+  max-width: 500px;
+  padding: 2rem;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.199);
+}
+.title {
+  text-align: center;
+  color: var(--Neon-Green);
+  font-size: small;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.advice {
+  text-align: center;
+  color: var(--Light-Cyan);
+  font-size: var(--font-size-quote);
+}
+.divider {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.button {
+  background-color: var(--Neon-Green);
+  border: none;
+  background-image: url("./assets/icon-dice.svg");
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -30px;
+  cursor: pointer;
+  transition: box-shadow 250ms ease;
+}
+
+.button:focus,
+.button:hover {
+  box-shadow: 0 0 30px var(--Neon-Green);
+}
